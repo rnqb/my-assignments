@@ -1,5 +1,6 @@
 def show_balance(balance):
     print(f"Your current balance is: ${balance}")
+    return 1
     # assume float value for balance
 
 
@@ -12,11 +13,12 @@ def withdraw(balance):
     amount = float(input("Enter amount to withdraw: "))
     if amount > balance:
         print("invalid withdrawal amount")
-    elif amount < balance:
-        return balance - amount
+        return balance
     else:
+        return balance - amount
+   '''  else:
         print("Invalid input, please try again.")
-        withdraw(balance)
+        #withdraw(balance) '''
 
 
 def logout(name):
